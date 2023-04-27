@@ -1,7 +1,7 @@
 body {
   max-width: 375px;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 .center {
   display: flex;
@@ -10,14 +10,15 @@ body {
 }
 
 header {
-  width: 375px;
   left: 0px;
   top: 0px;
   border-radius: 0px;
 }
+section {
+  padding: 40px 0px;
+}
 h1 {
   height: 50px;
-
   font-family: Shrikhand;
   font-size: 30px;
   font-style: italic;
@@ -39,7 +40,7 @@ header h1 {
   align-items: center;
   gap: 15px;
   height: 50px;
-  width: 375px;
+  width: 100%;
 }
 #text-barre-recherche {
   width: 110px;
@@ -58,22 +59,23 @@ header h1 {
   display: flex;
   flex-direction: column;
 }
+.reservation {
+  background: #f7f7f7;
+}
 .reserver-titre h2 {
   width: 220px;
   height: 40px;
-  margin-top: 40px;
+  text-align: center;
 }
 h2 {
-  font-family: Roboto;
-  font-size: 24px;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   line-height: 28px;
   letter-spacing: 0em;
-  text-align: center;
 }
 .decouvrez {
-  padding: 0px 20px;
   width: 255px;
+  margin-bottom: 30px;
   color: #353535;
   text-align: center;
   display: flex;
@@ -82,25 +84,183 @@ h2 {
 
 button {
   color: white;
-  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+
+  background: linear-gradient(
+    0deg,
+    rgba(147, 86, 220, 1) 0%,
+    rgba(255, 121, 218, 1) 91%
+  );
   height: 50px;
   width: 218px;
   left: 0px;
   top: 50px;
   border-radius: 25px solid white;
   transform: scaleX(#9356dc);
-  transform: scaleY(#ff79da);
+  border: 0px;
 }
+
 .shadow {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   transform: matrix(1, 0, 0, 1, 0, 0);
 }
-
-article {
-  width: 100vw;
+.padding {
+  padding: 40px 20px;
 }
-img {
+.fonctionnement {
+  position: relative;
   width: 100%;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fonctionnement a {
+  color: black;
+  text-decoration: none;
+  list-style: none;
+  display: block;
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.fonctionnement-liens {
+  width: 95%;
+  height: 70px;
+  margin-left: 10px;
+  background-color: #f7f7f7;
+}
+.fonctionnement .numéro {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+}
+.fonctionnement .numéro {
+  position: absolute;
+  right: 94%;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #9356dc;
+}
+.icon-gris {
+  width: 16px;
+  color: #7e7e7e;
+}
+.icon-bleu {
+  width: 16px;
+  color: #9356dc;
+}
+.fonctionnement .f-logo {
+  position: absolute;
+  right: 82%;
+}
+
+.box-shadow {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+.Les-restaurents {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+h3 {
+  font-family: "Roboto", sans-serif;
+  padding-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.card p {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  padding-left: 10px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.text-restaurant {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.coeur {
+  height: 80px;
+  width: 80px;
+  padding-top: 8px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.decouvrez {
+  margin: 0px;
+  padding: 10px 0px 30px 0px;
+}
+
+article img {
+  width: 100%;
+  object-fit: cover;
+  height: 170px;
   border-radius: 20px 20px 0px 0px;
+}
+
+footer {
+  height: 200px;
+  background-color: #353535;
+  position: relative;
+}
+footer ul {
+  list-style: none;
+}
+footer li {
+  display: inline-block;
+}
+footer ul li a {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+footer h2 {
+  color: #ffffff;
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 20px 0px 0px 40px;
+}
+footer .icon-footer {
+  width: 70%;
+  color: #ffffff;
+}
+footer .mention {
+  display: flex;
+  flex-direction: column;
+}
+.espacement-icon1 {
+  margin-right: 10px;
+}
+.espacement-icon {
+  margin-right: 5px;
+}
+.footer {
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
