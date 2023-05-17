@@ -28,7 +28,14 @@
     <title>ohmyfood</title>
   </head>
   <body>
-    <header>
+    <div class="container">
+      <div class="loader">
+        <div class="ligne-bar">
+          <div class="ligne"></div>
+        </div>
+      </div>
+    </div>
+   <header class="header-menu ">
       <h1>ohmyfood</h1>
     </header>
     <main>
@@ -49,39 +56,39 @@
       <section class="reservation">
         <div class="reserver-titre center">
           <h2>Réserver le menu qui vous convient</h2>
-          <p class="decouvrez center">
+          <p class="decouvrez">
             Découvrez des restaurents d'exception, sélectionnés par nos soins.
           </p>
-          <button class="shadow">Explorer nos restaurants</button>
+          <button class="shadow button">Explorer nos restaurants</button>
         </div>
       </section>
-      <section class="padding">
+      <section class="espacement">
         <h2>Fonctionnement</h2>
         <div class="fonctionnement">
-          <div class="fonctionnement-liens box-shadow center">
+          <div class="fonctionnement-liens center">
             <div class="numéro">
               <p>1</p>
             </div>
-            <i class="f-logo icon-gris fa-solid fa-mobile-screen-button"></i>
+            <i class="position-icon icon-gris fa-solid fa-mobile-screen-button"></i>
             <a href="#">Choisissez un restaurant</a>
           </div>
-          <div class="fonctionnement-liens box-shadow center">
+          <div class="fonctionnement-liens center">
             <div class="numéro">
               <p>2</p>
             </div>
-            <i class="f-logo icon-gris fa-solid fa-list"></i>
+            <i class="position-icon icon-gris fa-solid fa-list"></i>
             <a href="#">Composez votre menu</a>
           </div>
-          <div class="fonctionnement-liens box-shadow center">
+          <div class="fonctionnement-liens center">
             <div class="numéro">
               <p>3</p>
             </div>
-            <i class="f-logo icon-bleu fa-solid fa-store"></i>
+            <i class="position-icon icon-bleu fa-solid fa-store"></i>
             <a href="#">Dégustez au restaurant</a>
           </div>
         </div>
       </section>
-      <section class="Les-restaurents padding">
+      <section class="Les-restaurents espacement">
         <h2>Restaurants</h2>
         <article>
           <div class="card">
@@ -95,7 +102,8 @@
                 <p>Ménilmontant</p>
               </div>
               <div class="coeur">
-                <i class="fa-thin fa-heart"></i>
+                 <i class="coeur-vide fa-regular fa-heart"></i>
+            <i class="coeur-plein fa-solid fa-heart"></i>
               </div>
             </div>
           </div>
@@ -112,7 +120,8 @@
                 <p>Charonne</p>
               </div>
               <div class="coeur">
-                <i class="fa-sharp fa-light fa-heart"></i>
+                 <i class="coeur-vide fa-regular fa-heart"></i>
+            <i class="coeur-plein fa-solid fa-heart"></i>
               </div>
             </div>
           </div>
@@ -125,11 +134,12 @@
             />
             <div class="text-restaurant">
               <div>
-                <h3>A la française</h3>
+                <h3>À la française</h3>
                 <p>Cité Rouge</p>
               </div>
               <div class="coeur">
-                <i class="fa-light fa-heart"></i>            </div>
+                 <i class="coeur-vide fa-regular fa-heart"></i>
+            <i class="coeur-plein fa-solid fa-heart"></i>
           </div>
         </article>
         <article>
@@ -144,38 +154,32 @@
                 <p>Folie-Méricourt</p>
               </div>
               <div class="coeur">
-                <i class="fa-sharp fa-light fa-heart"></i>
+                 <i class="coeur-vide fa-regular fa-heart"></i>
+            <i class="coeur-plein fa-solid fa-heart"></i>
               </div>
             </div>
           </div>
         </article>
       </section>
     </main>
+   <section>
     <footer>
-      <h2>ohmyfood</h2>
-      <ul>
-        <div class="footer">
-          <div class="icon-footer">
+        <h2>ohmyfood</h2>
+        <div class="icon-footer">
+          <ul>
             <li>
               <i class="fa-sharp fa-solid fa-utensils espacement-icon1"></i>
               <a href="#">proposer un restaurant</a>
             </li>
-          </div>
-          <div class="icon-footer">
             <li>
               <i class="fa-solid fa-handshake-angle espacement-icon"></i>
               <a href="#">Devenir partenaire</a>
             </li>
-          </div>
-          <div class="mention">
             <li><a href="#">Mentions légales</a></li>
-          </div>
-          <div>
             <li><a href="#">Contact</a></li>
-          </div>
-          </div>
+          </ul>
         </div>
-      </ul>
     </footer>
+      </section>
   </body>
 </html>
