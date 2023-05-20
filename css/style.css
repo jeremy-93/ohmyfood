@@ -3,10 +3,9 @@ body {
   padding: 0px;
   font-family: "Roboto", sans-serif;
 }
-/*
-main,
-header,
-footer {
+
+.loader {
+  position: absolute;
   animation-name: loader;
   animation-duration: 3.8s;
   animation-delay: 300ms;
@@ -26,8 +25,8 @@ footer {
 }
 
 .container {
-  width: 375px;
-  min-height: 100vh;
+  width: 100%;
+  min-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +40,7 @@ footer {
 
 .loader {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,7 +84,6 @@ footer {
     transform: scaleX(1);
   }
 }
-*/
 
 .center {
   display: flex;
@@ -104,7 +102,9 @@ footer {
   justify-content: flex-start;
 }
 /* H1 */
-
+.flèche a i {
+  display: none;
+}
 .header-menu h1 {
   margin: 0;
   font-family: Shrikhand;
@@ -196,14 +196,21 @@ footer {
   transition: all 1s;
 }
 .button:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .shadow {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
 }
+/*
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
 
+*/
+.shadow:hover {
+  box-shadow: 0px 7px 5px 3px rgba(0, 0, 0, 0.21);
+}
 /* FIN SECTION 1 */
 
 /* SECTION 2 */
@@ -231,6 +238,9 @@ footer {
   justify-content: center;
 }
 .fonctionnement-liens {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
   width: 95%;
   height: 70px;
   margin-left: 10px;
@@ -248,23 +258,18 @@ footer {
 }
 .fonctionnement .numéro {
   position: absolute;
-  right: 94%;
+  left: -13px;
   width: 25px;
   height: 25px;
   border-radius: 50%;
   background-color: #9356dc;
 }
 .icon-gris {
-  width: 16px;
   color: #7e7e7e;
 }
-.icon-bleu {
-  width: 16px;
+.icon-gris:hover {
   color: #9356dc;
-}
-.position-icon {
-  position: absolute;
-  right: 82%;
+  cursor: pointer;
 }
 
 /* FIN SECTION 2 FONCTIONNEMENT */
@@ -311,7 +316,7 @@ footer {
   height: 50px;
   width: 50px;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
 }
 .coeur i {
@@ -346,10 +351,23 @@ footer {
 
 .image-principal-menu1 {
   width: 100%;
-  height: 275px;
+  height: 411px;
   position: relative;
   z-index: -1;
-  bottom: 20px;
+  bottom: 132px;
+  object-fit: cover;
+}
+.nouveau {
+  height: 29px;
+  width: 110px;
+  position: absolute;
+  right: 0;
+  margin-right: 15px;
+  bottom: 198px;
+  font-size: 14px;
+  border-radius: 2px;
+  background-color: #99e2d0;
+  color: #008766;
 }
 .titre-restaurant {
   height: 40px;
@@ -357,12 +375,12 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 .menu-restaurant {
   position: relative;
   z-index: 1;
-  bottom: 90px;
+  bottom: 27px;
   width: 100%;
   padding-top: 0px;
   background: #f6f6f6;
@@ -378,6 +396,7 @@ footer {
   letter-spacing: 0em;
   text-align: left;
 }
+
 span {
   padding-bottom: 5px;
   border-bottom: 3px solid #99e2d0;
@@ -446,25 +465,38 @@ h3 {
   justify-content: end;
   align-items: flex-end;
 }
-/*
+
 .coche {
-  position: absolute;
-  animation-name: coche;
+  text-align: center;
+  line-height: 70px !important;
+  position: relative;
   font-size: 22px;
   width: 70px;
   height: 70px;
   color: white;
   background-color: #99e2d0;
   border-radius: 0px 20px 20px 0px;
+}
+.v {
+  flex-direction: row;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(70px);
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+.v .coche {
+  opacity: 0;
+}
+.v .coche:hover {
+  transition: 0s;
   opacity: 1;
 }
-.coche i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.v:hover {
+  transform: translateX(0);
 }
-*/
-@keyframes coche {
+
+@keyframes {
   0% {
     transform: rotate(0);
     opacity: 0;
@@ -560,6 +592,7 @@ footer ul {
   justify-content: space-between;
   height: 110px;
   flex-direction: column;
+  width: 100%;
 }
 footer li {
   display: inline-block;
@@ -581,7 +614,6 @@ footer h2 {
   margin: 0px;
 }
 footer .icon-footer {
-  width: 70%;
   color: #ffffff;
 }
 
@@ -593,15 +625,136 @@ footer .icon-footer {
 }
 .footer-menu {
   background-color: #353535;
-  width: 375px;
-  height: 203px;
-  position: absolute;
-  top: 1443px;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
 }
 /* FIN FOOTER */
 
-@media screen {
+@media (min-width: 950px) {
+  .header-menu {
+    top: 0px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .GG {
+    width: 110px;
+    display: flex;
+    justify-content: center;
+  }
+  .flèche a i {
+    display: block;
+    list-style: none;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+  }
+  .fonctionnement {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  article,
+  .espacement h2,
+  .fonctionnement {
+    position: relative;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+  }
+  .section-menu,
+  .h2-menu {
+    position: relative;
+    width: 80%;
+  }
+  .grid {
+    display: grid;
+    position: relative;
+    left: 5%;
+    right: 5%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 290px;
+    width: 94%;
+  }
+
+  .menu-restaurant {
+    width: 80%;
+    right: 9%;
+    left: 9%;
+  }
+  .section-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-restaurant {
+    left: 10%;
+    width: 80%;
+  }
+  .footer .icon-footer {
+    width: 65%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .footer-menu h2 {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .footer-menu {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: end;
+    height: 100px;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 20px;
+  }
+  .footer-h2 {
+    width: 250px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  footer .icon-footer {
+    width: 65%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  footer h2 {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: end;
+    height: 100px;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    width: 570px;
+    height: 20px;
+  }
+  .footer-h2 {
+    width: 200px;
+    height: 75px;
+    display: flex;
+    justify-content: c;
+    align-items: flex-start;
+  }
+
+  .flèche {
+    top: 24px;
+    position: absolute;
+    left: 0;
+    font-size: 25px;
+    width: 40px;
+  }
 }
