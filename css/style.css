@@ -84,7 +84,7 @@ body {
 .center {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .row {
@@ -161,16 +161,18 @@ body {
 .reserver-titre {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  align-items: center;
 }
 
 .reserver-titre h2 {
-  width: 300px;
+  width: 80%;
   height: 40px;
   text-align: center;
 }
 
 .decouvrez {
-  width: 300px;
+  width: 80%;
   color: #353535;
   text-align: center;
   display: flex;
@@ -190,9 +192,10 @@ body {
   width: 200px;
   border: 0px;
   transition: all 1s;
+  cursor: pointer;
 }
 .button:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .shadow {
@@ -236,6 +239,7 @@ body {
 .fonctionnement-liens {
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
   width: 95%;
   height: 70px;
@@ -280,8 +284,6 @@ body {
   flex-direction: column;
 }
 .Les-restaurents article {
-  justify-content: space-between;
-  gap: 100px;
 }
 .Les-restaurents h2 {
   margin: 0;
@@ -377,14 +379,13 @@ body {
 .menu-restaurant {
   position: relative;
   z-index: 1;
-  bottom: 27px;
+  bottom: 36px;
   width: 100%;
   padding-top: 0px;
   background: #f6f6f6;
   border-radius: 40px 40px 0px 0px;
 }
 .h1-menu {
-  padding-left: 25px;
   font-family: Shrikhand;
   font-size: 28px;
   font-style: italic;
@@ -426,7 +427,6 @@ article img {
   height: 170px;
 }
 .text-menu {
-  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -438,47 +438,19 @@ article img {
   animation-name: menu;
   animation-delay: 0.5s;
   animation-duration: 3s;
-  transform: translateX(-600px);
+  transform: translateX(-1600px);
   animation-fill-mode: forwards;
   cursor: pointer;
   overflow: hidden;
+}
+.temp-apparition-menu2 {
+  animation-delay: 2.5s;
+  animation-duration: 4s;
 }
 
-.text-menu2 {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-left: 15px;
-  height: 70px;
-  width: 95%;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
-  animation-name: menu;
-  animation-delay: 2s;
-  animation-duration: 3s;
-  transform: translateX(-600px);
-  animation-fill-mode: forwards;
-  cursor: pointer;
-  overflow: hidden;
-}
-.text-menu3 {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-left: 15px;
-  height: 70px;
-  width: 95%;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
-  animation-name: menu;
-  animation-delay: 3s;
-  animation-duration: 3s;
-  transform: translateX(-600px);
-  animation-fill-mode: forwards;
-  cursor: pointer;
-  overflow: hidden;
+.temp-apparition-menu3 {
+  animation-delay: 5s;
+  animation-duration: 4s;
 }
 
 @keyframes menu {
@@ -515,30 +487,22 @@ article img {
   color: white;
   background-color: #99e2d0;
   border-radius: 0px 20px 20px 0px;
-  transform: translateX(70px);
-  border: ;
 }
-.boite-coche {
-  width: 150px;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  overflow: hidden;
+.transition .coche {
+  margin-right: -70px;
   transition: 1.5s;
 }
-
-.translate:hover .boite-coche {
-  transform: translateX(0px);
+.transition:hover .coche {
+  margin-right: 0px;
 }
 
 .contenue-card {
-  width: 96%;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  display: flex;
-  flex-direction: column;
+  overflow: hidden;
 }
 h3 {
   font-size: 18px;
@@ -560,7 +524,7 @@ h3 {
   align-items: start;
 }
 
-.menu-restaurant p {
+.text-menu p {
   font-size: 15px;
   font-weight: 300;
   margin: 0px;
@@ -591,7 +555,7 @@ h3 {
 
 .boite-button {
   width: 100%;
-  height: 130px;
+  height: 94px;
 }
 .button-menue {
   width: 186px;
@@ -602,7 +566,7 @@ h3 {
 /* FOOTER */
 
 footer {
-  height: 210px;
+  height: 200px;
   background-color: #353535;
 }
 
@@ -614,7 +578,6 @@ footer ul {
   justify-content: space-between;
   height: 110px;
   flex-direction: column;
-  width: 100%;
 }
 footer li {
   display: inline-block;
@@ -633,7 +596,6 @@ footer h2 {
   font-weight: 400;
   font-size: 18px;
   padding: 35px 0px 0px 40px;
-  margin: 0px;
 }
 footer .icon-footer {
   color: #ffffff;
@@ -692,6 +654,7 @@ footer .icon-footer {
   .grid {
     display: grid;
     position: relative;
+    margin-bottom: 20px;
     left: 5%;
     right: 5%;
     grid-template-columns: 1fr 1fr;
@@ -750,6 +713,8 @@ footer .icon-footer {
   footer h2 {
     display: flex;
     flex-direction: row-reverse;
+    width: 135px;
+    justify-content: start;
   }
   footer {
     display: flex;
